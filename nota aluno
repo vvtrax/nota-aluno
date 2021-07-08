@@ -1,0 +1,29 @@
+alunos  = {}
+
+quantidade_alunos  =  int ( input ( "Digite a quantidade de alunos:" ))
+
+para  i  sem  intervalo ( 1 , quantidade_alunos + 1 ):
+    nome  =  input ( "Digite o nome do"  +  str ( i ) +  "º aluno:" )
+    notas  = []
+    para  posicao_nota  no  intervalo ( 0 , 4 ):
+        notas . append ( round ( float ( input ( "Digite a"  +  str ( posicao_nota + 1 ) +  "ª nota do aluno"  +  nome  +  ":" )), 1 ))
+    alunos [ nome ] =  notas
+
+imprimir ( " \ n Notas dos alunos" )
+imprimir ( "-"  *  9 )
+
+para  aluno  nos  alunos . itens ():
+    mídia  =  rodada ( soma ( aluno [ 1 ]) / 4 , 1 )
+    
+    se  mídia  > =  7 :
+        situacao  =  "Aprovado"
+    mais :
+        situacao  =  "Reprovado"
+
+    imprimir ( aluno [ 0 ]. ljust ( 15 ), fim = "" )
+    imprimir ( str ( aluno [ 1 ] [ 0 ]). ljust ( 4 ), fim = "" )
+    imprimir ( str ( aluno [ 1 ] [ 1 ]). ljust ( 4 ), fim = "" )
+    imprimir ( str ( aluno [ 1 ] [ 2 ]). ljust ( 4 ), fim = "" )
+    imprimir ( str ( aluno [ 1 ] [ 3 ]). ljust ( 4 ), fim = "" )
+    imprimir ( str ( mídia ). ljust ( 4 ), fim = "" )
+    imprimir ( Situação . rjust ( 10 ))
